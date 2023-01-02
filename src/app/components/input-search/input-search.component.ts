@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, Input } from '@angular/core';
 
 @Component({
   selector: 'app-input-search',
@@ -8,12 +8,16 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class InputSearchComponent {
   @ViewChild('refInput') refInput!: ElementRef
 
+  @Input() placeholder: string = '';
+  @Input() icon: string = '';
+  @Input() isPassword: boolean = false;
+  
   constructor(){
     
   }
 
-  ngAfterViewInit(): void {
-    this.refInput.nativeElement.focus();
+  public getClassIcon = () : string => {
+    return this.icon + ' m-auto px-3'
   }
 
   public change = ():void => {

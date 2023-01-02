@@ -1,1 +1,28 @@
-<p>register works!</p>
+<img class="w-32 m-auto my-5" src="https://cdn.worldvectorlogo.com/logos/angular-icon.svg" alt="">
+
+<form>
+
+  <app-input-search
+    placeholder="Nombre"
+    icon="fa-solid fa-user"
+  ></app-input-search>
+  <div class="mt-3">
+    <app-input-search
+      placeholder="Email"
+      icon="fa-solid fa-envelope"
+    ></app-input-search>
+  </div>
+  <div class="mt-3">
+    <app-input-search
+      placeholder="Password"
+      icon="fa-solid fa-lock"
+      [isPassword]=true
+    ></app-input-search>
+  </div>
+
+  <div class="text-center mt-5 mb-5">
+    <button class="bg-blue-700 px-4 py-2 rounded mb-2">Registrar</button>
+    <p>Ya tienes una cuenta? <a routerLink="/auth/login" class="hover:text-blue-700">inicia sesion aqui</a></p>
+  </div>
+
+</form>
