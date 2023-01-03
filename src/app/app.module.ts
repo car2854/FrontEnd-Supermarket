@@ -1,3 +1,5 @@
+import { DATE_PIPE_DEFAULT_OPTIONS, NgOptimizedImage } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -16,9 +18,14 @@ import { PagesModule } from './pages/pages.module';
     AppRoutingModule,
     PagesModule,
     RouterModule,
-    AuthModule
+    AuthModule,
+    NgOptimizedImage,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [{
+    provide: DATE_PIPE_DEFAULT_OPTIONS,
+    useValue: { dateFormat: 'shortDate' }
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

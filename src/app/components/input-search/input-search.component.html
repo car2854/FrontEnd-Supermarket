@@ -1,6 +1,6 @@
 <form>
   <div class="border dark:border-[#FFFFFFB0] rounded flex">
-    <i *ngIf="icon.trim().length > 0" [class]=getClassIcon()></i>
-    <input [type]="(isPassword)? 'password' : 'text'" class="bg-[#00000000] w-full p-2" [placeholder]="placeholder" (input)="change()" #refInput>
+    <i class='fa-solid fa-magnifying-glass m-auto px-3'></i>
+    <input type="text" class="bg-[#00000000] w-full p-2" [placeholder]="placeholder" (input)="change()" #refInput>
   </div>
 </form>

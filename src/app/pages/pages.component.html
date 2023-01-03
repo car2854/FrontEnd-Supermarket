@@ -5,6 +5,6 @@
 </div>
 
 
-<div class="fixed dark:color-[#111827] right-px bottom-px mr-8 mb-8 border-2 w-16 text-center py-5 rounded-full">
+<div *ngIf="userModel.type === 'client'" class="cursor-pointer fixed dark:color-[#111827] right-px bottom-px mr-8 mb-8 border-2 w-16 text-center py-5 rounded-full">
   <i class="fa-solid fa-cart-shopping"></i>
 </div>

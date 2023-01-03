@@ -9,15 +9,9 @@ export class InputSearchComponent {
   @ViewChild('refInput') refInput!: ElementRef
 
   @Input() placeholder: string = '';
-  @Input() icon: string = '';
-  @Input() isPassword: boolean = false;
   
   constructor(){
     
-  }
-
-  public getClassIcon = () : string => {
-    return this.icon + ' m-auto px-3'
   }
 
   public change = ():void => {
