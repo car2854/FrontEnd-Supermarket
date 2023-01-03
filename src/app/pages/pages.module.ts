@@ -10,6 +10,8 @@ import { ListProductsComponent } from './client-page/list-products/list-products
 import { ComponentsModule } from '../components/components.module';
 import { ManageProductComponent } from './company-page/manage-product/manage-product.component';
 import { ManageBranchOfficeComponent } from './company-page/manage-branch-office/manage-branch-office.component';
+import { NewProductComponent } from './company-page/new-product/new-product.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,11 +23,13 @@ import { ManageBranchOfficeComponent } from './company-page/manage-branch-office
     ListProductsComponent,
     ManageProductComponent,
     ManageBranchOfficeComponent,
+    NewProductComponent,
   ],
   imports: [
     CommonModule,
     PagesRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    ReactiveFormsModule
   ]
 })
 export class PagesModule { }

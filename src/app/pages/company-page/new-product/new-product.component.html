@@ -1,0 +1,45 @@
+
+<form (submit)="createProduct()" [formGroup]="productForm">
+  
+  <div class="mb-2">
+    <label>Nombre del producto</label>
+  </div>
+  <div [class]="dataTailwindClass.divInputClass">
+    <input type="text" [class]="dataTailwindClass.inputClass" placeholder="Nombre del producto" formControlName="name">
+  </div>
+
+  <div class="mt-5">
+    <div class="mb-2">
+      <label>Descripcion</label>
+    </div>
+    <div [class]="dataTailwindClass.divInputClass">
+      <textarea type="text" [class]="dataTailwindClass.inputClass" placeholder="Nombre del producto" formControlName="description"></textarea>
+    </div>
+  </div>
+
+  <div class="mt-5">
+    <div class="mb-2">
+      <label>Categoria</label>
+    </div>
+    <select [class]="dataTailwindClass.selectInputClass" formControlName="category_id">
+      <option class="hidden" value="">Seleccione una categoria</option>
+      <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+    </select>
+  </div>
+
+  <div class="mt-5">
+    <div class="mb-2">
+      <label>Precio</label>
+    </div>
+    <div [class]="dataTailwindClass.divInputClass">
+      <input type="number" [class]="dataTailwindClass.inputClass" placeholder="Nombre del producto" formControlName="price">
+    </div>
+  </div>
+
+  <div class="mt-5 text-right">
+    <button type="submit" [class]=dataTailwindClass.buttonClass>
+      Guardar
+    </button>
+  </div>
+
+</form>

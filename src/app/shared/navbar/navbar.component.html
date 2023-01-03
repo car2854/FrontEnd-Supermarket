@@ -1,17 +1,17 @@
 <div class="dark:bg-[#111827] fixed w-full text-right py-6 px-10 pl-72">
   <div class="flex justify-between">
-    <h1>Carlos Alberto</h1>
+    <h1 *ngIf="userModel">{{userModel.name}}</h1>
     <ul class="flex flex-row-reverse gap-5">
-      <li>
+      <li *ngIf="!userModel">
         <a routerLink="/auth/login">Login</a>
       </li>
-      <li>
+      <li *ngIf="!userModel">
         <a routerLink="/auth/register">
           Registrar
         </a>
       </li>
-      <li>
-        Salir
+      <li *ngIf="userModel">
+        <a class="cursor-pointer" (click)="logout()">Salir</a>
       </li>
     </ul>
   </div>
