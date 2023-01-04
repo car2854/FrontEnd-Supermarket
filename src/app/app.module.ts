@@ -20,7 +20,7 @@ import { PagesModule } from './pages/pages.module';
     RouterModule,
     AuthModule,
     NgOptimizedImage,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [{
     provide: DATE_PIPE_DEFAULT_OPTIONS,

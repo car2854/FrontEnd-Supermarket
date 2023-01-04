@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, Input } from '@angular/core';
+import { Component, ElementRef, ViewChild, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input-search',
@@ -9,12 +9,12 @@ export class InputSearchComponent {
   @ViewChild('refInput') refInput!: ElementRef
 
   @Input() placeholder: string = '';
+  @Output() textEvent = new EventEmitter<string>()
   
-  constructor(){
-    
+  constructor(){}
+
+  public change = (e:any):void => {
+    this.textEvent.emit(e.target.value);
   }
 
-  public change = ():void => {
-    
-  }
 }

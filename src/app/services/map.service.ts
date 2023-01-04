@@ -7,7 +7,7 @@ const base_url = enviroment.base_url;
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
+export class MapService {
 
   constructor(
     private httpClient: HttpClient
@@ -25,12 +25,8 @@ export class ProductService {
     }
   }
 
-  public getProducts = (query='') => {
-    return this.httpClient.get(`${base_url}/product?data=${query}`);
-  }
 
-  public createProduct = (data:any) => {
-    return this.httpClient.post(`${base_url}/product`, data, this.header);
+  public getApiGoogle = () => {
+    return this.httpClient.get(`${base_url}/map`, this.header)
   }
-  
 }

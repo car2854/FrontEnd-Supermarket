@@ -12,7 +12,7 @@ import { ManageProductComponent } from './company-page/manage-product/manage-pro
 import { ManageBranchOfficeComponent } from './company-page/manage-branch-office/manage-branch-office.component';
 import { NewProductComponent } from './company-page/new-product/new-product.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { NewBranchOfficeComponent } from './company-page/new-branch-office/new-branch-office.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ManageProductComponent,
     ManageBranchOfficeComponent,
     NewProductComponent,
+    NewBranchOfficeComponent,
   ],
   imports: [
     CommonModule,

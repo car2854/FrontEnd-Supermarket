@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { tailwindClass } from 'src/app/helpers/tailwind-class';
 import { ProductModel } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -10,6 +11,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class ManageProductComponent {
 
   public products: ProductModel[] = [];
+  public dataClass = tailwindClass;
 
   constructor(
     private productService: ProductService
@@ -26,6 +28,18 @@ export class ManageProductComponent {
           console.log(this.products);
           
         }
-      })
+      });
+  }
+
+  public changeSearchInput = (value:string) => {
+    this.productService.getProducts(value)
+      .subscribe({
+        error: (err:any) => {
+          console.log(err);
+        },
+        next: (resp:any) => {
+          this.products = resp.products;
+        }
+      });
   }
 }

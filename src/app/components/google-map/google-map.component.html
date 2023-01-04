@@ -1,0 +1,8 @@
+<div *ngIf="apiLoaded | async">
+  <google-map 
+    height="500px"
+    width="750px" 
+    [center]="center"
+    [zoom]="zoom">
+  </google-map>
+</div>
